@@ -1,44 +1,49 @@
-# store-sales-forecasting
+# 📊 Rossmann Store Sales Forecasting System 🚀
 
-📊 Rossmann Store Sales Forecasting System
-🚀 Project Overview
+![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
+![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-red.svg)
+![MySQL](https://img.shields.io/badge/Database-MySQL-orange.svg)
+![XGBoost](https://img.shields.io/badge/ML-XGBoost-green.svg)
 
-This project is an end-to-end Machine Learning solution designed to predict daily sales for Rossmann, one of Europe’s largest drugstore chains.
+## 📌 Project Overview
+This is an end-to-end Machine Learning solution designed to predict daily sales for **Rossmann**, one of Europe’s largest drugstore chains. By analyzing historical data from 1,115 stores (over 1M rows), the system generates accurate forecasts to help store managers plan ahead.
 
-By leveraging historical data from 1,115 stores (1M+ rows), the system generates accurate forecasts and provides insights into how promotions, holidays, and store types impact revenue.
+> **The Problem:** Rossmann store managers are tasked with predicting daily sales up to six weeks in advance. Store sales are influenced by many factors, including promotions, competition, school and state holidays, seasonality, and locality.
 
-✨ Key Features
-📦 Big Data Processing
-Efficiently handled and processed 1M+ rows of retail data using MySQL.
-🤖 AI Prediction Engine
-Built using XGBoost Regressor to capture complex sales patterns and seasonality.
-📊 Interactive Dashboard
-Developed a professional UI using Streamlit for real-time predictions.
-📈 Business Intelligence Insights
-Provides recommendations for:
-Staffing optimization
-Inventory planning
-Promotion strategies
-🛠️ Tech Stack
-Language: Python 3.x
-Database: MySQL
-Machine Learning: XGBoost, Scikit-learn
-Data Processing: Pandas, NumPy
-Web Framework: Streamlit
-Database Connectivity: SQLAlchemy, PyMySQL
+---
 
-📂 Project Structure
+## ✨ Key Features
+* **📦 Big Data Pipeline:** Efficiently handles 1M+ rows of retail data using **MySQL** for structured storage and retrieval.
+* **🤖 AI Prediction Engine:** Powered by the **XGBoost Regressor**, capturing complex non-linear patterns like seasonality and holiday trends.
+* **📊 Interactive Dashboard:** A **Streamlit** web interface that allows users to input store parameters and receive instant sales predictions.
+* **📉 Insight-Driven:** Analyzes the impact of promotions and competition distance on total revenue.
 
+---
+
+## 🛠️ Tech Stack
+| Category | Technology |
+| :--- | :--- |
+| **Language** | Python 3.10+ |
+| **Database** | MySQL |
+| **Machine Learning** | XGBoost, Scikit-learn |
+| **Data Processing** | Pandas, NumPy |
+| **Web Framework** | Streamlit |
+| **ORM/Connectivity** | SQLAlchemy, PyMySQL |
+
+---
+
+## 📂 Project Structure
+```text
 sales-prediction-system/
 ├── app/
 │   └── main.py              # Streamlit Dashboard (UI)
 ├── data/
-│   ├── train.csv            # Historical Sales Data
+│   ├── train.csv            # Historical Sales Data (raw)
 │   └── store.csv            # Store Metadata
 ├── models/
-│   └── sales_model.pkl      # Trained ML Model
+│   └── sales_model.pkl      # Trained XGBoost Model
 ├── src/
-│   ├── database_handler.py  # MySQL Data Pipeline
-│   └── model_trainer.py     # Model Training Script
-├── requirements.txt         # Dependencies
-└── README.md                # Documentation
+│   ├── database_handler.py  # MySQL Data Pipeline & Queries
+│   └── model_trainer.py     # Model Training & Evaluation Script
+├── requirements.txt         # Project Dependencies
+└── README.md                # Project Documentation
